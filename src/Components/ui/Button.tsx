@@ -6,12 +6,27 @@ export interface ButtonProps {
     endIcon? : any,
     onClick? : () => void
 }
+
+const variantStyles = {
+    "primary" : "bg-[#241d49] text-[#e1e5fe]",
+    "secondary" : "bg-[#c9cdfc] text-[#241d49]"
+}
+
+const defaultStyle = "rounded-2xl cursor-pointer flex "
+const sizeStyle = {
+    "sm" : "px-4 py-2",
+    "md" : "px-6 py-4",
+    "lg" : "px-8 py-6"
+}
+
+
+
 export const Button = (props : ButtonProps) => {
-    if(props.variant == "primary"){
-        return <span className="bg-[#241d49] text-[#e1e5fe] rounded-2xl cursor-pointer p-2  ">{props.startIcon}{props.text}</span>
-    }
-    else if(props.variant == "secondary"){
-        return <span className="bg-[#c9cdfc] text-[#241d49] rounded-2xl cursor-pointer p-2  ">{props.startIcon}{props.text}</span>
-    }
+    
+        return <button className={`${variantStyles[props.variant]} ${defaultStyle} ${sizeStyle[props.size]}`}>
+            {props.startIcon ? <div className="pr-2">{props.startIcon}</div> : null} {props.text}
+            </button>
+    
+    
 }
 
