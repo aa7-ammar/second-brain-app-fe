@@ -1,4 +1,4 @@
-import { ShareIcon } from "../Icons/Share"
+import { ShareIcon } from "../../Icons/Share"
 
 interface CardProps{
     title : string,
@@ -7,7 +7,7 @@ interface CardProps{
 }
 
 export const Card = ({title , link , type} : CardProps) => {
-    return <div className="bg-white max-w-72 p-4 rounded-lg shadow-md border border-gray-200 min-h-48  ">
+    return <div className="bg-white max-w-72 p-4 rounded-lg shadow-md border border-gray-200 h-fit hover:shadow-xl ">
         <div className="flex justify-between">
             <div className="flex items-center text-md">
                 <div className="text-gray-500 pr-2">

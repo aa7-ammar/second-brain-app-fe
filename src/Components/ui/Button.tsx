@@ -10,11 +10,11 @@ export interface ButtonProps {
 }
 
 const variantStyles = {
-    "primary" : "bg-[#241d49] text-[#e1e5fe] border hover:bg-[#6249df]",
-    "secondary" : "bg-[#c9cdfc] text-[#241d49] border hover:bg-[#6249df] hover:text-white"
+    "primary" : "bg-[#241d49] text-[#e1e5fe] hover:bg-[#6249df]",
+    "secondary" : "bg-[#c9cdfc] text-[#241d49] hover:bg-[#6249df] hover:text-white"
 }
 
-const defaultStyle = "rounded-2xl cursor-pointer flex items-center font-normal "
+const defaultStyle = "rounded-2xl cursor-pointer flex items-center font-normal hover:shadow-xl "
 const sizeStyle = {
     "sm" : "px-2 py-2 text-sm",
     "md" : "px-4 py-2 text-md",

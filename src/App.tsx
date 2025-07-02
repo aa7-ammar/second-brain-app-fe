@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import './App.css'
-import { Card } from './Components/Card';
+import { Card } from './Components/ui/Card';
 import { ContentModel } from './Components/ui/AddContentModal';
 import { Button } from './Components/ui/Button';
 import { PlusIcon } from './Icons/Plus';
