@@ -6,7 +6,9 @@ export interface ButtonProps {
     text : string,
     startIcon?: ReactElement,
     endIcon? : ReactElement,
-    onClick? : () => void
+    onClick? : () => void,
+    fullWidth? : boolean,
+    loading? : boolean
 }
 
 const variantStyles = {
@@ -14,7 +16,7 @@ const variantStyles = {
     "secondary" : "bg-[#c9cdfc] text-[#241d49] hover:bg-[#6249df] hover:text-white"
 }
 
-const defaultStyle = "rounded-2xl cursor-pointer flex items-center font-normal hover:shadow-xl "
+const defaultStyle = "rounded-lg cursor-pointer flex items-center font-normal hover:shadow-xl transition-all duration-300   "
 const sizeStyle = {
     "sm" : "px-2 py-2 text-sm",
     "md" : "px-4 py-2 text-md",
@@ -25,7 +27,7 @@ const sizeStyle = {
 
 export const Button = (props : ButtonProps) => {
     
-        return <button onClick={props.onClick}className={`${variantStyles[props.variant]} ${defaultStyle} ${sizeStyle[props.size]} `}>
+        return <button onClick={props.onClick}className={`${variantStyles[props.variant]} ${defaultStyle} ${sizeStyle[props.size]} ${props.fullWidth ? "w-full flex justify-center" : ""} ${props.loading ? "opacity-20 pointer-events-none" : ""}`}>
             
                 {props.startIcon ? props.startIcon : null}
                 <span className="pr-1 pl-1 ">{props.text}</span> 
